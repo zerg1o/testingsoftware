@@ -19,6 +19,8 @@ class UserController extends Controller
 
     public function index($user = null){
 
+       
+        // $user == null ? $user:null;
         if($user!=null){
 
             $users = User::where('nick','like','%'.$user.'%')

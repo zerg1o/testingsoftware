@@ -6,10 +6,9 @@
             <div class="col-md-6">
                 <h1>Usuarios</h1>
                 <form action="{{ route('user.index') }}" method="GET" id="buscar">
-
                     <div class="row">
                         <div class="form-group col">
-                            <input class="form-control" type="text" id="user" />
+                            <input class="form-control" type="text" id="user" name="user"/>
                         </div>
                         <div class="form-group col">
                             <input class="btn btn-primary" type="submit" value="Buscar" />

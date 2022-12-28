@@ -1,4 +1,4 @@
-// var url = "http://localhost/testing-main/public";
+// var url = "http://localhost/testing/public";
 // window.addEventListener('load',function(){
 //     $('.btn-like').css('cursor','pointer');
 //     $('.btn-dislike').css('cursor','pointer');
@@ -65,7 +65,7 @@
 //     });
 // });
 
-var url = "http://localhost/testing-main/public";
+var url = "http://localhost/testing/public";
 /*
 window.addEventListener('load',function(){
     $('.btn-like').css('cursor','pointer');
@@ -136,7 +136,7 @@ window.addEventListener('load',function(){
 
 async function like(post_id){
     const csrfToken = document.head.querySelector("[name~=csrf-token][content]").content;
-    const res = await fetch('http://localhost/testing-main/public/like/'+post_id,{
+    const res = await fetch('http://localhost/testing/public/like/'+post_id,{
         method:'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ async function like(post_id){
 
 /* async function dislike(post_id){
     const csrfToken = document.head.querySelector("[name~=csrf-token][content]").content;
-    const res = await fetch('http://localhost/testing-main/public/dislike/'+post_id,{
+    const res = await fetch('http://localhost/testing/public/dislike/'+post_id,{
         method:'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ async function like(post_id){
 async function countLike(post_id){
     const csrfToken = document.head.querySelector("[name~=csrf-token][content]").content;
     try {
-        const res = await fetch('http://localhost/testing-main/public/getlike/'+post_id,{
+        const res = await fetch('http://localhost/testing/public/getlike/'+post_id,{
             method:'GET',
             headers: {
                 'Content-Type': 'application/json',

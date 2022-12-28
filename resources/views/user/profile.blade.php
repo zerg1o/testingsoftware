@@ -23,8 +23,8 @@
 
                 <div class="clearfix"></div>
                 <hr>
-                @foreach ($user->images as $image)
-                    @include('includes.image',['image'=>$image])
+                @foreach ($user->posts as $post)
+                    @include('includes.carrusel',['post'=>$post])
                 @endforeach
 
                 {{-- Paginacion
