@@ -13,15 +13,15 @@
 
                 <span class="nickname">{{ ' @' . $post->user->nick }}</span>
             </a>
-            @foreach($post->user->followers as $follow)
-                @if($follow->follower_id = \Auth::user()->id)
+            {{-- @foreach($post->user->followers as $follow) --}}
+                {{-- @if($follow->follower_id = \Auth::user()->id) --}}
                     <a href="{{route('follow.save',['user_id'=>$post->user->id])}}">
                         <span class="seguir"><strong>Seguir</strong></span>
                     </a>
-                @else
+                {{-- @else
                     <span class="seguir"><strong>Seguido</strong></span>
-                @endif
-            @endforeach
+                @endif --}}
+            {{-- @endforeach --}}
             
 
         </div>
