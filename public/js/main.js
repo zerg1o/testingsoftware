@@ -134,6 +134,16 @@ window.addEventListener('load',function(){
     });
 }); */
 
+// $('#buscador').on('submit',(function(){
+    
+//     $(this).attr('action',url+'/users/'+$('#buscador #user').val());
+
+// }));
+
+function buscar(){
+    var buscador = getElementById('buscador').attr('action',url+'/users/');
+}
+
 async function like(post_id){
     const csrfToken = document.head.querySelector("[name~=csrf-token][content]").content;
     const res = await fetch('http://localhost/testing/public/like/'+post_id,{

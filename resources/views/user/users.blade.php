@@ -5,10 +5,10 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h1>Usuarios</h1>
-                <form action="{{ route('user.index') }}" method="GET" id="buscar">
+                <form action="{{ route('user.index') }}" method="GET" id="buscador">
                     <div class="row">
                         <div class="form-group col">
-                            <input class="form-control" type="text" id="user" name="user"/>
+                            <input class="form-control" type="text" id="user"/>
                         </div>
                         <div class="form-group col">
                             <input class="btn btn-primary" type="submit" value="Buscar" />
