@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
 use App\Image;
+use App\Follow;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -175,6 +176,9 @@ Route::post('/comentario/registrar/{id}',function($id,Request $request){
 
 
 
+
+
+
 Route::get('/imagenes',function(){
     return Image::all();
 });
@@ -191,4 +195,34 @@ Route::get('/imagen-eliminar/{id}', function($id){
         $message = array('message'=>'Error:'.$e->getMessage());
     }
     return response()->json($message);
+});
+
+
+
+
+Route::post('/follow-user/{id}',function($id,Request $request){
+
+
+    try{
+        
+        $follower_id = $request->input('follower_id');
+
+        $follow = new Follow();
+        $follow->user_id = $id;
+        $follow->follower_id = $follower_id;
+
+        $follow->save();
+        
+        $mensaje = [
+            "mensaje"=>"Usuario seguido!!!"
+            ];
+    }
+    catch(Exception $e){
+        $mensaje = [
+            "mensaje"=>"Error: ".$e->getMessage()
+            ];
+    }
+    
+    return response()->json($mensaje);
+    
 });

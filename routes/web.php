@@ -78,3 +78,5 @@ Route::get('/getlike/{post_id}','LikeController@getlikepost')->name('get.like');
 //FOLLOW
 Route::get('follow/{user_id}','FollowController@save')->name('follow.save');
 
+
+

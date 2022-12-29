@@ -91,9 +91,15 @@ class UserController extends Controller
 
     public function profile($id){
         $user = User::find($id);
-        return view('user.profile',[
-            'user'=>$user
-        ]);
+
+        if($user){
+            return view('user.profile',[
+                'user'=>$user
+            ]);
+        }else{
+            return redirect()->route('home');
+        }
+        
     }
 
 
